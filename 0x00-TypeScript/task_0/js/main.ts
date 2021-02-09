@@ -19,3 +19,4 @@ const student_2: Student = {
   location: 'Ohio',
 };
 
+const studentsList: Array<Student> = [student_1, student_2];
