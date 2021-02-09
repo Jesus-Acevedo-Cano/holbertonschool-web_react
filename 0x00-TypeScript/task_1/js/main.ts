@@ -4,5 +4,7 @@ interface Teacher {
   fullTimeEmployee: boolean;
   yearsOfExperience?: number;
   location: string;
+  /* eslint-disable @typescript-eslint/no-explicit-any */
   [key: string]: any;
+  /* eslint-enable @typescript-eslint/no-explicit-any */
 }
