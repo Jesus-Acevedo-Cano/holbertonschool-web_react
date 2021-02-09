@@ -5,7 +5,7 @@ interface Teacher {
   yearsOfExperience?: number;
   location: string;
   /* eslint-disable @typescript-eslint/no-explicit-any */
-  [key: string]: any;
+  [propName: string]: any;
   /* eslint-enable @typescript-eslint/no-explicit-any */
 }
 
