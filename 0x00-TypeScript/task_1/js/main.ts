@@ -24,18 +24,19 @@ interface printTeacherFunction {
 export const printTeacher: printTeacherFunction = printTeacher_;
 
 /* task 4 class construction */
-export interface Student {
+interface StudentConstructor {
+  new(firstName: string, lastName: string): StudentClassInterface;
+}
+
+interface StudentClassInterface {
   firstName: string;
   lastName: string;
   workOnHomework(): string;
   displayName(): string;
 }
 
-export interface StudentConstructor {
-  new(firstName: string, lastName: string): Student;
-}
-
-export class StudentClass implements Student {
+export const StudentClass: StudentConstructor =
+class StudentClass implements StudentClassInterface {
   firstName: string;
   lastName: string;
   constructor(firstName:string, lastName:string) {
