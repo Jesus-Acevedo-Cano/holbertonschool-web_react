@@ -18,10 +18,11 @@ module.exports = {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'public')
   },
+  devtool: 'inline-source-map',
   devServer: {
     contentBase: path.join(__dirname, './public'),
-    port: '8564',
-    compress: true
+    compress: true,
+    port: '8564'
   },
   plugins: [
     new CleanWebpackPlugin(),
