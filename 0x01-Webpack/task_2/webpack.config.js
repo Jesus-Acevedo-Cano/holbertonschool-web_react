@@ -2,12 +2,7 @@ const path = require("path");
 
 module.exports = {
   mode: 'production',
-  entry: {
-    all: ["./modules/header/header.js", "./modules/body/body.js", "./modules/footer/footer.js"],
-    /*header: './modules/header/header.js',
-    body: './modules/body/body.js',
-    footer: './modules/footer/footer.js'*/
-  },
+  entry: './js/dashboard_main.js',
   performance: {
     maxAssetSize: 1000000,
     maxEntrypointSize: 1000000,
