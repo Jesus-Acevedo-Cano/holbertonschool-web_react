@@ -20,16 +20,16 @@ describe('CourseList test', () => {
   });
 
   test('CourseList render with an empty array', () => {
-    let compo = shallow(<CourseList listCourses={[]}/>);
-    expect(compo.find(CourseListRow)).to.have.lengthOf(3);
-    compo = shallow(<CourseList />);
-    expect(compo.find(CourseListRow)).to.have.lengthOf(3);
+    let wrapper = shallow(<CourseList listCourses={[]}/>);
+    expect(wrapper.find(CourseListRow)).to.have.lengthOf(3);
+    wrapper = shallow(<CourseList />);
+    expect(wrapper.find(CourseListRow)).to.have.lengthOf(3);
   });
 
   test('List of courses', () => {
-    const compo = shallow(<CourseList listCourses={listCourses}/>);
-    expect(compo.find(CourseListRow).first().html()).to.equal('<tr><th colSpan="2">Available courses</th></tr>');
-    expect(compo.find(CourseListRow)).to.have.lengthOf(5);
+    const wrapper = shallow(<CourseList listCourses={listCourses}/>);
+    expect(wrapper.find(CourseListRow).first().html()).to.equal('<tr style="background-color:#deb5b545"><th colSpan="2">Available courses</th></tr>');
+    expect(wrapper.find(CourseListRow)).to.have.lengthOf(5);
   });
 
 });
