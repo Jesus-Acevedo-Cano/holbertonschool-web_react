@@ -4,9 +4,11 @@ import PropTypes from 'prop-types';
 function CourseListRow({ isHeader, textFirstCell, textSecondCell }) {
   let content = '';
   let bgColor = '';
+  const headerBg = { backgroundColor: '#deb5b545' };
+  const rowBg = { backgroundColor: '#f5f5f5ab' };
 
   if (isHeader) {
-    bgColor = { backgroundColor: '#deb5b545' };
+    bgColor = headerBg;
     if (textSecondCell === null) {
       content = (<th colSpan='2'>{textFirstCell}</th>);
     }
@@ -14,7 +16,7 @@ function CourseListRow({ isHeader, textFirstCell, textSecondCell }) {
       content = (<React.Fragment><th>{textFirstCell}</th><th>{textSecondCell}</th></React.Fragment>);
     }
   } else {
-    bgColor = { backgroundColor: '#f5f5f5ab' };
+    bgColor = rowBg;
     content = (<React.Fragment><td>{textFirstCell}</td><td>{textSecondCell}</td></React.Fragment>);
   }
 
