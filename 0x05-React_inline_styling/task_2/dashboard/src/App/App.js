@@ -55,9 +55,9 @@ class App extends Component {
             </BodySectionWithMarginBottom>}
           <BodySection title='News from the School' /><p>Some random news</p>
         </div>
-        <footer className={css(s.footer)}>
+        <div className={css(s.footer)}>
         <Footer />
-        </footer>
+        </div>
       </div>
     </React.Fragment>
     );
@@ -76,8 +76,9 @@ App.defaultProps = {
 
 const s = StyleSheet.create({
   body: {
-    padding: '30px 50px',
-    minHeight: '24rem'
+    backgroundColor: '#fff',
+    padding: '4rem',
+    minHeight: '25rem',
   },
   footer: {
     display: 'flex',
@@ -85,9 +86,8 @@ const s = StyleSheet.create({
     fontStyle: 'italic',
     borderTop: '3px solid #e0354b',
     width: '100%',
-    position: 'absolute',
-    bottom: '0',
-    maxHeight: '100%'
+    position: 'relative',
+    top: '16rem'
   }
 });
 
